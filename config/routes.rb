@@ -9,6 +9,6 @@ BowlApp::Application.routes.draw do
   end
 
   scope constraints: lambda { |request| request.host == www_host } do
-    match '(*path)', to: 'bowl_app#home', via: [:get]
+    match '!*.js', to: 'bowl_app#home', via: [:get]
   end
 end
