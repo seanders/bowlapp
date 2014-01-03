@@ -9,7 +9,7 @@ angular.module('api.app',[]).
     if ($rootScope.environment === 'dev') {
       $rootScope.api_host = "http://localhost:3000/";
     } else if ($rootScope.environment === 'prod') {
-      $rootScope.api_host = "http://localhost:5000/"; //come back here and update host for production
+      $rootScope.api_host = "http://hidden-cliffs-5922.herokuapp.com/"; //come back here and update host for production
     }
 
     this.call = function() {
