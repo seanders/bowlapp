@@ -6,6 +6,8 @@ BowlApp::Application.routes.draw do
     resources :people
 
     resources :bowls
+
+    root :to => 'bowl_app#home'
   end
 
   # scope constraints: lambda { |request| request.host == www_host } do
