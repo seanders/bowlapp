@@ -22,7 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  host: localhost
   database: db/prod_bowl_app
   pool: 5
   timeout: 5000
