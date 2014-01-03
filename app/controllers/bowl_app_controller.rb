@@ -6,6 +6,6 @@ class BowlAppController < ApplicationController
   protected
 
   def self.angular_app
-    @index_html ||= File.read(File.join('../angular/app/index.html'))
+    @index_html ||= File.read(File.join(Rails.root, 'public/dist/index.html'))
   end
 end
