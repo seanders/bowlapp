@@ -10,6 +10,4 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree ../../public/scripts
-//= require_tree ../../public/bower_components
-//= require_tree ../../public/styles
+
