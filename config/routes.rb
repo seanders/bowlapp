@@ -8,7 +8,7 @@ BowlApp::Application.routes.draw do
     resources :bowls
   end
 
-  scope constraints: lambda { |request| request.host == www_host } do
-    match '!*.js', to: 'bowl_app#home', via: [:get]
-  end
+  # scope constraints: lambda { |request| request.host == www_host } do
+  #   match '(*path)', to: 'bowl_app#home', via: [:get]
+  # end
 end
