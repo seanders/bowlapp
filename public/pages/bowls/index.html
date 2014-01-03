@@ -1,0 +1,20 @@
+<table class="table table-condensed table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Bowl</th>
+      <th>City</th>
+      <th>Date</th>
+      <th>Team 1</th>
+      <th>Team 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="game in bowls">
+      <td>{{game.name}}</td>
+      <td>{{game.city}}</td>
+      <td>{{game.date | date:'longDate'}}</td>
+      <td>{{game.teams[0].name}} <span class="badge" ng-class="{'badge-success': game.teams[0].bowl_team_relation.winner}">{{game.teams[0].bowl_team_relation.score}}</span></td>
+      <td>{{game.teams[1].name}} <span class="badge" ng-class="{'badge-success': game.teams[1].bowl_team_relation.winner}">{{game.teams[1].bowl_team_relation.score}}</span></td>
+    </tr>
+  </tbody>
+</table>
