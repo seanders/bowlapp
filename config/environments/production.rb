@@ -1,4 +1,7 @@
 BowlApp::Application.configure do
+
+  config.api_url  = 'http://localhost:3000/'
+  config.www_url  = 'http://hidden-cliffs-5922.herokuapp.com/'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
