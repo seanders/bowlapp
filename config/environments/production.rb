@@ -26,7 +26,6 @@ BowlApp::Application.configure do
   config.serve_static_assets = true
 
   #adding paths to load javascript files
-  config.assets.paths
 
   config.assets.compress = false
 
