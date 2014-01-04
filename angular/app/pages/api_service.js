@@ -50,4 +50,8 @@ angular.module('api.app',[]).
       return this.call("/people")
     };
 
+    this.get_person = function(person_id) {
+      return this.call("/people/"+person_id)
+    }
+
   });
