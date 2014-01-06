@@ -22,6 +22,10 @@ angular.module('bowlApp', ['api.app'])
         templateUrl: 'pages/people/index.html',
         controller: "PeopleIndexController"
       })
+      .when('/people/:id', {
+        templateUrl: 'pages/people/show.html',
+        controller: "PeopleShowController"
+      })
       .when('/bowls', {
         templateUrl: 'pages/bowls/index.html',
         controller: "BowlsIndexController"

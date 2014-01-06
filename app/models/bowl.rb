@@ -12,7 +12,8 @@ class Bowl < ActiveRecord::Base
   end
 
   def winner
-    bowl_team_relations.where(winner: true).first
+    team_id = bowl_team_relations.where(winner: true).first.try(:team_id)
+    Team.find(team_id) if team_id
   end
 
   def set_winner

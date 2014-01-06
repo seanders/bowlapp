@@ -12,16 +12,19 @@ end
 
 child :picks => :picks do
   attributes :point_value
-  child :team do
-    attributes :name, :image_url
+  child :team => :picked_team do
+    attributes :id, :name, :image_url
   end
-  child :bowl do
-    attributes :name, :date
-    child :teams do
+  child :bowl do |bowl|
+    extends "bowls/partials/base"
+    child bowl.winner => :winning_team do
       attributes :id, :name, :image_url
-      child :game_result => :game_result do
-        attributes :id, :bowl_id, :team_id, :score, :winner
-      end
     end
+    # child :teams do
+    #   attributes :id, :name, :image_url
+    #   child :game_result => :game_result do
+    #     attributes :id, :bowl_id, :team_id, :score, :winner
+    #   end
+    # end
   end
 end

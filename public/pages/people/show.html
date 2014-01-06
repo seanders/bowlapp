@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="game in person.picks" ng-class="{success: game.picked_team.id == game.bowl.winning_team.id}">
-      <td><img ng-src="{{game.bowl.image_url}}" class="bowl-icon"></img> {{game.bowl.name}}</td>
+      <td><img ng-src="{{game.bowl.image_url}}" class="bowl-icon"> {{game.bowl.name}}</td>
       <td>{{ game.point_value | number }}</td>
       <td>{{ game.picked_team.name }}</td>
       <td>{{ game.bowl.winning_team.name }}</td>

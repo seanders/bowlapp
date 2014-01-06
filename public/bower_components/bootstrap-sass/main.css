@@ -20,3 +20,10 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+.bowl-icon {
+  height: 30px;
+  width: 30px;
+}
+
+a:hover { cursor:pointer; }
