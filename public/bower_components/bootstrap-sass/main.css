@@ -26,4 +26,9 @@ body {
   width: 30px;
 }
 
+.big-bowl-icon {
+    height: 60px;
+    width: 60px;
+}
+
 a:hover { cursor:pointer; }
