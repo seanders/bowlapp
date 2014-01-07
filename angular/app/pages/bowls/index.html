@@ -10,7 +10,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="game in bowls">
-      <td><img ng-src="{{game.image_url}}" class="bowl-icon"></img> {{game.name}}</td>
+      <td><img ng-src="{{game.image_url}}" class="bowl-icon"></img> <a ng-href="/bowls/{{game.id}}">{{game.name}}</a></td>
       <td>{{game.city}}</td>
       <td>{{game.date | date:'longDate'}}</td>
       <td>{{game.teams[0].name}} <span class='badge' ng-class="{'badge-success': game.teams[0].bowl_team_relation.winner}">{{game.teams[0].bowl_team_relation.score}}</span></td>

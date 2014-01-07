@@ -1,0 +1,18 @@
+<h3 ng-show="bowl"><img ng-src="{{bowl.image_url}}" class="big-bowl-icon"></img> {{bowl.name}} Bowl</h3>
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Pick</th>
+      <th>Banked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="pick in bowl.picks" ng-class="{success: pick.picked_team.id == bowl.winning_team.id}">
+      <td>{{pick.person.first_name}} {{pick.person.last_name}}</td>
+      <td>{{pick.picked_team.name}}</td>
+      <td ng-show="pick.picked_team.id == bowl.winning_team.id">{{pick.point_value | number}}</td>
+      <td ng-show="pick.picked_team.id != bowl.winning_team.id">0</td>
+    </tr>
+  </tbody>
+</table>

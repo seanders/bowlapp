@@ -1,3 +1,4 @@
+attribute :id
 attribute :name
 attribute :city
 attribute :date

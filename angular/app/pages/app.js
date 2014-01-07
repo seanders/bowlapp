@@ -30,6 +30,10 @@ angular.module('bowlApp', ['api.app'])
         templateUrl: 'pages/bowls/index.html',
         controller: "BowlsIndexController"
       })
+      .when('/bowls/:id', {
+        templateUrl: 'pages/bowls/show.html',
+        controller: "BowlShowController"
+      })
       .otherwise({
         redirectTo: '/'
       });

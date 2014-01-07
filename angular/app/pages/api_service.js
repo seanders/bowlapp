@@ -46,6 +46,10 @@ angular.module('api.app',[]).
       return this.call("/bowls");
     };
 
+    this.get_bowl = function(bowl_id) {
+      return this.call("/bowls/"+bowl_id);
+    };
+
     this.get_people = function() {
       return this.call("/people")
     };
