@@ -20,6 +20,10 @@ gem 'rabl'
 
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
