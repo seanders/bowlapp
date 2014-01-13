@@ -6,7 +6,7 @@ if (document.location.host === 'localhost:9000') {
   window.BS_ENV = 'prod';
 }
 
-angular.module('bowlApp', ['api.app'])
+angular.module('bowlApp', ['api.app', 'd3'])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
