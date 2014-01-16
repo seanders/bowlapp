@@ -1,7 +1,7 @@
 task :build_tags do
   #runs ctag builder for rb files in your app's directory
   #i.e. methods/classes you wrote yourself
-  find . -name '*.rb' | ctags -f .tags -L -
+  system("find . -name '*.rb' | ctags -f .tags -L -")
 
   #runs ctag builder for gems i.e. rails/other_gems
   require 'bundler'
